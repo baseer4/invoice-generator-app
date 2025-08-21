@@ -1,9 +1,11 @@
-import { Button } from "@/components/ui/button"
+import { Button } from "../components/ui/button"
 import SignupIMG from "../assets/Signup.png"
+import { Label } from "../components/ui/label"
+import { Input } from "../components/ui/input"
 
 export default function SignupPage() {
   return (
-    <div className="flex">
+    <div className="flex pt-10">
       <div className="flex flex-col justify-center px-8 md:px-16 lg:px-24 w-full md:w-1/2 text-white">
         <div className="max-w-md mx-auto w-full">
           <h1 className="text-3xl font-bold mb-2">Sign up to begin journey</h1>
@@ -13,11 +15,11 @@ export default function SignupPage() {
 
           <div className="space-y-6">
             <div>
-              <label className="block text-sm mb-2">Enter your name</label>
-              <input
+              <Label className="block text-sm mb-2">Enter your name</Label>
+              <Input
                 type="text"
                 placeholder="Enter Name"
-                className="w-full px-4 py-2 rounded-md bg-gray-800 border border-gray-700 focus:ring-2 focus:ring-lime-400 focus:outline-none"
+                className="bg-neutral-800/50 border border-neutral-700 text-white placeholder:text-neutral-500 h-12 rounded-md focus:border-neutral-500 focus:ring-0"
               />
               <p className="text-xs text-gray-500 mt-1">
                 This name will be displayed with your inquiry
@@ -25,11 +27,11 @@ export default function SignupPage() {
             </div>
 
             <div>
-              <label className="block text-sm mb-2">Email Address</label>
-              <input
+              <Label className="block text-sm mb-2">Email Address</Label>
+              <Input
                 type="email"
                 placeholder="Enter Email ID"
-                className="w-full px-4 py-2 rounded-md bg-gray-800 border border-gray-700 focus:ring-2 focus:ring-lime-400 focus:outline-none"
+                className="bg-neutral-800/50 border border-neutral-700 text-white placeholder:text-neutral-500 h-12 rounded-md focus:border-neutral-500 focus:ring-0"
               />
               <p className="text-xs text-gray-500 mt-1">
                 This email will be displayed with your inquiry
@@ -37,11 +39,11 @@ export default function SignupPage() {
             </div>
 
             <div>
-              <label className="block text-sm mb-2">Password</label>
-              <input
+              <Label className="block text-sm mb-2">Password</Label>
+              <Input
                 type="password"
                 placeholder="Enter Password"
-                className="w-full px-4 py-2 rounded-md bg-gray-800 border border-gray-700 focus:ring-2 focus:ring-lime-400 focus:outline-none"
+                className="bg-neutral-800/50 border border-neutral-700 text-white placeholder:text-neutral-500 h-12 rounded-md focus:border-neutral-500 focus:ring-0"
               />
               <p className="text-xs text-gray-500 mt-1">
                 Any further updates will be forwarded on this email
@@ -49,11 +51,11 @@ export default function SignupPage() {
             </div>
           </div>
 
-          <div className="flex items-center mt-8 gap-4">
-            <Button variant="neon">Register</Button>
-            <p className="text-sm text-gray-400">
-              Already have an account? <a href="/login" className="underline">Login</a>
-            </p>
+          <div className="flex items-center mt-8 gap-6">
+            <Button variant="secondary">Register</Button>
+            <a href='/login'  className="text-sm text-gray-400">
+              Already have an account?{" "}
+            </a>
           </div>
         </div>
       </div>
