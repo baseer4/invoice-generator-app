@@ -1,10 +1,10 @@
 import express from "express";
 import dotenv from "dotenv";
 import { connectDB } from "./lib/db";
-import authRoutes from "./routes/auth.route";
 import cors from "cors";
 import cookieParser from "cookie-parser";
-
+import authRoutes from "./routes/auth.route";
+import invoiceRoutes from "./routes/invoice.route";
 
 
 dotenv.config();
@@ -20,6 +20,9 @@ app.use(cors({
     credentials:true,
 }))
 app.use("/api/auth", authRoutes)
+
+app.use("/api",invoiceRoutes)
+
 
 
 app.listen(PORT,()=>{
